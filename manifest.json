@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "SummarAI",
+  "version": "1.0",
+  "description": "Smart AI-Powered Summaries for Any Webpage. SummarAI extracts key insights from any webpage in seconds, powered by OpenAI.",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
