@@ -12,9 +12,18 @@ document.addEventListener("DOMContentLoaded", () => {
         await summarizeText(prompt, maxTokens, model);
     });
 
-    document.getElementById("close-sidepanel").addEventListener("click", () => {
-        chrome.sidePanel.close();
-    });
+    const closeButton = document.getElementById("close-sidepanel");
+    if (closeButton) {
+        closeButton.addEventListener("click", async () => {
+            // Send message to content script to remove the side panel
+            chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+                const tabId = tabs[0].id;
+                chrome.tabs.sendMessage(tabId, { action: "removeSidePanel" }).catch(error => console.error("Could not send removeSidePanel message:", error));
+            });
+        });
+    } else {
+        console.error("Close button not found!");
+    }
 });
 
 async function summarizeText(prompt, maxTokens, model) {

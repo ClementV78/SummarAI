@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": " ",
+  "name": "SummarAI",
   "version": "1.0",
   "description": "Smart AI-Powered Summaries for Any Webpage. SummarAI extracts key insights from any webpage in seconds, powered by OpenAI.",
   "permissions": [

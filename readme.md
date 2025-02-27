@@ -7,8 +7,9 @@ SummarAI is a Chrome extension that provides smart AI-powered summaries for any 
 - Summarize any webpage content with a custom prompt.
 - Save and load your OpenAI API key.
 - Customize the maximum number of tokens for the summary.
+- Choose from available OpenAI models (GPT-4, GPT-3.5, etc.).
 - View real-time logs of the summarization process.
-- Modern and user-friendly interface.
+- Summarization is done in a side panel for a cleaner experience.
 
 ## Installation
 
@@ -30,13 +31,13 @@ SummarAI is a Chrome extension that provides smart AI-powered summaries for any 
 
 2. Enter your OpenAI API key and click "Save API Key".
 
-3. Click "Open Summarize Frame" to open the summarization frame.
+3. Click "Open SummarAI Side Panel" to open the summarization panel.
 
-4. Enter your custom prompt and the maximum number of tokens for the summary.
+4. In the side panel, enter your custom prompt, the maximum number of tokens, and select a model.
 
 5. Click "Summarize" to start the summarization process.
 
-6. View the summary and logs in the summarization frame.
+6. View the summary and logs in the side panel.
 
 ## Contributing
 
