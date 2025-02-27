@@ -27,4 +27,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             frame.innerHTML = `<h3>SummarAI Summary</h3><p>${message.summary}</p>`;
         }
     }
+
+    if (message.action === "removeSidePanel") {
+        const frame = document.getElementById("summarAI-frame");
+        if (frame) {
+            frame.remove();
+        }
+    }
 });
