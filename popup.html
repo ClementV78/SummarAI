@@ -5,12 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SummarAI</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            width: 300px;
+            padding: 10px;
+        }
+        button {
+            width: 100%;
+        }
+        label {
+            display: block;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
-    <h2>SummarAI</h2>
+    <h2>SummarAI Settings</h2>
+    <label for="apiKey">OpenAI API Key:</label>
     <input type="password" id="apiKey" placeholder="Enter your OpenAI API Key" />
-    <button id="saveApiKey">Save API Key</button>
-    <button id="openSummarizeFrame">Open Summarize Frame</button>
+    <label for="maxTokens">Max Tokens:</label>
+    <input type="number" id="maxTokens" min="80" max="500" value="150">
+    <button id="openSidePanel">Open SummarAI Side Panel</button>
+    <p id="result"></p>
     <script src="popup.js"></script>
 </body>
 </html>
